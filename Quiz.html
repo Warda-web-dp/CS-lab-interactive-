@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS Lab Quiz</title>
+<style>
+body{
+background-image: url("/helo/abstract-futuristic-circuit-board-illustration-high-computer-technology-dark-blue-color-background-hi-tech-digital-technology-concept-free-vector.jpg");
+background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  height: 100%;
+  
+}
+.navbar{
+  color :#FFFBFB;
+  font-size: 15px;
+}
+  .quiz-section {
+  padding: 40px 20px;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  border-radius: 10px;
+  height: 100%;
+  font-size: 30px;
+  
+  
+  
+  
+}
+
+.quiz-container h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-btn {
+  padding: 12px 20px;
+  background: #2f80ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  
+}
+
+.option-btn:hover {
+  background: #1c5ed6;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  color: yellow;
+}
+
+#nextBtn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ALGORITHM */
+.algo{
+  padding:20px;
+  text-align:center;
+  font-size: 35px;
+  height: 100%;
+  
+}
+.n {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #2f80ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  gap: 5px;
+  
+}
+
+.bars{
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  gap:6px;
+  height:480px;
+}
+
+.bars span{
+  width:22px;
+  background:#38bdf8;
+  border-radius:4px;
+}
+/* MOBILE */
+@media(max-width:768px){
+  .options {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo"><h1>© CS Lab  Interactive</h1></div><br>
+  <ul>
+    <li><h1><a href="index.html"class="n">Home</a></h1></li>
+    <li><h1><a href="Topics.html"class="n">Topics</a></h1></li>
+    <li><h1><a href="Quiz.html"class="n">Quiz</a></h1></li>
+        <li><h1><a href="Data structure.html" class="n">Data structure</a></h1></li><br />
+  </ul>
+</nav>
+
+<!-- HERO / PAGE TITLE -->
+<section class="navbar">
+  <h1>Test Your Knowledge</h1>
+  <h2>Data Structures Quiz</h2>
+</section>
+
+<!-- QUIZ SECTION -->
+<section class="quiz-section section-bg">
+  <div class="quiz-container">
+    <h2 id="question">Question will appear here</h2>
+    <div class="options">
+      <button class="option-btn" onclick="checkAnswer(0)">Option 1</button>
+      <button class="option-btn" onclick="checkAnswer(1)">Option 2</button>
+      <button class="option-btn" onclick="checkAnswer(2)">Option 3</button>
+      <button class="option-btn" onclick="checkAnswer(3)">Option 4</button>
+    </div>
+    <p id="feedback"></p>
+    <button id="nextBtn" onclick="nextQuestion()">Next Question</button>
+  </div>
+</section>
+<!-- ALGORITHM -->
+<section class="algo">
+  <h2>Visualize Algorithms</h2>
+  <p>Bubble Sort (Basic View)</p>
+
+  <div class="bars">
+    <span style="height:30%"></span>
+    <span style="height:70%"></span>
+    <span style="height:40%"></span>
+    <span style="height:80%"></span>
+    <span style="height:50%"></span>
+        <span style="height:30%"></span>
+    <span style="height:70%"></span>
+    <span style="height:40%"></span>
+    <span style="height:80%"></span>
+    <span style="height:50%"></span>
+        <span style="height:30%"></span>
+    <span style="height:70%"></span>
+    <span style="height:40%"></span>
+    <span style="height:80%"></span>
+    <span style="height:50%"></span>
+        <span style="height:30%"></span>
+    <span style="height:70%"></span>
+    <span style="height:40%"></span>
+    <span style="height:80%"></span>
+    <span style="height:50%"></span>
+        <span style="height:30%"></span>
+    <span style="height:70%"></span>
+    <span style="height:40%"></span>
+    <span style="height:80%"></span>
+    <span style="height:50%"></span>
+  </div>
+</section>
+
+
+<script>const quizData = [
+  
+  
+    
+
+  {
+    question: "Which data structure uses FIFO?",
+    options: ["Stack", "Queue", "Linked List", "Tree"],
+    answer: 1
+  },
+  {
+    question: "Which data structure uses LIFO?",
+    options: ["Stack", "Queue", "Graph", "Array"],
+    answer: 0
+  },
+  {
+    question: "Which is used for hierarchical data?",
+    options: ["Queue", "Stack", "Tree", "Linked List"],
+    answer: 2
+  }
+];
+
+let current = 0;
+
+function loadQuestion() {
+  const q = quizData[current];
+  document.getElementById("question").innerText = q.question;
+  const btns = document.querySelectorAll(".option-btn");
+  btns.forEach((btn,i) => btn.innerText = q.options[i]);
+  document.getElementById("feedback").innerText = "";
+}
+
+function checkAnswer(i) {
+  if(i === quizData[current].answer){
+    document.getElementById("feedback").innerText = "Correct!";
+    document.getElementById("feedback").style.color = "lightgreen";
+  } else {
+    document.getElementById("feedback").innerText = "Incorrect!";
+    document.getElementById("feedback").style.color = "red";
+  }
+}
+
+function nextQuestion() {
+  current++;
+  if(current >= quizData.length) current = 0; // restart quiz
+  loadQuestion();
+}
+
+// load first question
+loadQuestion();</script>
+</body>
+</html>
