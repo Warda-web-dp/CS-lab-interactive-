@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>© CS Lab Interactive</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #081948;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== SPLASH CONTAINER ===== */
+.splash {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  animation: zoom 1.5s ease-in-out infinite alternate;
+}
+
+/* ===== TEXT ===== */
+.splash h1 {
+  font-size: 40px;
+}
+
+.splash span {
+  color: #4fa3ff;
+}
+
+/* ===== LOADING DOTS ===== */
+.loading {
+  margin-top: 15px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+</style>
+</head>
+<body>
+
+<div class="splash">
+  <!-- LOGO IMAGE -->
+  <img src="/project /file_00000000d63871fab09ccb80ce509090.png" class="logo" alt="Logo">
+
+  <h1>© CS Lab <span>Interactive</span></h1>
+  <div class="loading">Loading...</div>
+</div>
+
+<script>
+  // 3 seconds baad home page open hoga
+  setTimeout(function(){
+    window.location.href = "logo.html";
+  }, 3000);
+</script>
+
+</body>
+</html>

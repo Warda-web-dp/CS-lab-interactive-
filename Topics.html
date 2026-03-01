@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topics | CS Lab Interactive</title>
+<style>
+.o{
+  color: white;
+}
+body{
+  background-image: url("/project /images (1).jpeg");
+background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+}
+}
+  .topic-section {
+  padding: 40px 20px;
+}
+.hero{
+  color: white;
+}
+.topic-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.topic-box {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.75);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.topic-box h3 {
+  color: #4fa3ff;
+}
+
+.topic-box p {
+  line-height: 1.6;
+}
+
+pre {
+  background: black;
+  color: #00ffcc;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.n {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #2f80ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  gap: 5px;
+  
+ 
+}
+.head{
+  text-align: center;
+  color: white;
+}
+  
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo"><h1 class="hero">© CS Lab <span>Interactive</span></h1></div>
+  <ul>
+    <li class="o"><a href="logo.html"class="n">Home</a></li><br />
+    <li class="o"><a href="Topics.html"class="n">Topics</a></li><br />
+    <li class="o"><a href="Quiz.html" class="n">Quiz</a></li><br />
+        <li class="o"><a href="Data structure.html" class="n">Data structure</a></li><br />
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Web Development Topics</h1>
+  <h3>HTML • CSS • JavaScript</h3>
+</section>
+
+<!-- ================= HTML ================= -->
+<section class="hero">
+  <h2 class="head">HTML Topics</h2>
+
+  <!-- Topic 1 -->
+  <div class="topic-box">
+    <h3>1. HTML Headings</h3>
+    <p>
+      HTML headings are used to define headings on a webpage.
+      They range from &lt;h1&gt; to &lt;h6&gt;.
+    </p>
+    <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;</code></pre>
+  </div>
+
+  <!-- Topic 2 -->
+  <div class="topic-box">
+    <h3>2. HTML Paragraph</h3>
+    <p>
+      Paragraph tag &lt;p&gt; is used to write normal text content.
+    </p>
+    <pre><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+  </div>
+
+  <!-- Topic 3 -->
+  <div class="topic-box">
+    <h3>3. HTML Links</h3>
+    <p>
+      Anchor tag is used to create links between pages.
+    </p>
+    <pre><code>&lt;a href="index.html"&gt;Go to Home&lt;/a&gt;</code></pre>
+  </div>
+</section>
+
+<!-- ================= CSS ================= -->
+<section class="hero">
+  <h2 class="head">CSS Topics</h2>
+
+  <!-- Topic 1 -->
+  <div class="topic-box">
+    <h3>1. CSS Color</h3>
+    <p>
+      CSS color property is used to set text color.
+    </p>
+    <pre><code>p {
+  color: red;
+}</code></pre>
+  </div>
+
+  <!-- Topic 2 -->
+  <div class="topic-box">
+    <h3>2. CSS Background Color</h3>
+    <p>
+      Background-color sets the background of an element.
+    </p>
+    <pre><code>div {
+  background-color: black;
+}</code></pre>
+  </div>
+
+  <!-- Topic 3 -->
+  <div class="topic-box">
+    <h3>3. CSS Flexbox</h3>
+    <p>
+      Flexbox is used to create responsive layouts easily.
+    </p>
+    <pre><code>.container {
+  display: flex;
+  gap: 20px;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ================= JAVASCRIPT ================= -->
+<section class="hero">
+  <h2 class="head">JavaScript Topics</h2>
+
+  <!-- Topic 1 -->
+  <div class="topic-box">
+    <h3>1. JavaScript Variables</h3>
+    <p>
+      Variables are used to store data values.
+    </p>
+    <pre><code>let name = "Ali";
+const age = 20;</code></pre>
+  </div>
+
+  <!-- Topic 2 -->
+  <div class="topic-box">
+    <h3>2. JavaScript Function</h3>
+    <p>
+      Functions perform a specific task when called.
+    </p>
+    <pre><code>function greet() {
+  alert("Hello World");
+}</code></pre>
+  </div>
+
+  <!-- Topic 3 -->
+  <div class="topic-box">
+    <h3>3. JavaScript Button Click</h3>
+    <p>
+      JavaScript can respond to user actions like button clicks.
+    </p>
+    <pre><code>&lt;button onclick="sayHi()"&gt;Click&lt;/button&gt;
+
+&lt;script&gt;
+function sayHi() {
+  alert("Hi!");
+}
+&lt;/script&gt;</code></pre>
+  </div>
+</section>
+
+<footer>
+  <h2 class="head">© CS Lab Interactive</h2>
+</footer>
+
+</body>
+</html>
